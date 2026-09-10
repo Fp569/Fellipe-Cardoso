@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+  <title>Currículo - Fellipe Cardoso</title>
+
+  <style>
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background:
+        radial-gradient(
+          circle at 15% 20%,
+          rgba(34, 197, 94, 0.07),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 85% 80%,
+          rgba(22, 163, 74, 0.05),
+          transparent 30%
+        ),
+        #020604;
+    }
+
+    /* =====================================================
+       GRADIENTE DO HEADER
+    ====================================================== */
+
+    .green-gradient {
+      background:
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(34, 197, 94, 0.22),
+          transparent 35%
+        ),
+        radial-gradient(
+          circle at 20% 90%,
+          rgba(22, 101, 52, 0.20),
+          transparent 35%
+        ),
+        linear-gradient(
+          135deg,
+          #020403 0%,
+          #07110b 45%,
+          #0b2416 75%,
+          #06110a 100%
+        );
+    }
+
+
+    /* =====================================================
+       GRADIENTE SUAVE PARA ÁREAS DE INFORMAÇÃO
+    ====================================================== */
+
+    .information-gradient {
+      background:
+        radial-gradient(
+          circle at 100% 0%,
+          rgba(34, 197, 94, 0.10),
+          transparent 35%
+        ),
+        linear-gradient(
+          135deg,
+          rgba(2, 8, 5, 0.98),
+          rgba(7, 25, 15, 0.96),
+          rgba(3, 12, 7, 0.98)
+        );
+    }
+
+
+    /* =====================================================
+       GRADIENTE DOS CARDS
+    ====================================================== */
+
+    .soft-card {
+      background:
+        linear-gradient(
+          135deg,
+          rgba(248, 250, 249, 1),
+          rgba(241, 248, 243, 0.96)
+        );
+    }
+
+
+    /* =====================================================
+       ANIMAÇÃO SUTIL DO GRADIENTE
+    ====================================================== */
+
+    .animate-gradient {
+      background-size: 180% 180%;
+      animation: gradientAnimation 12s ease-in-out infinite;
+    }
+
+    @keyframes gradientAnimation {
+
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+
+    }
+
+
+    /* =====================================================
+       GLOW VERDE — BEM SUTIL
+    ====================================================== */
+
+    .green-glow {
+      box-shadow:
+        0 0 25px rgba(34, 197, 94, 0.08),
+        0 12px 40px rgba(0, 0, 0, 0.20);
+    }
+
+
+    /* =====================================================
+       GLOW DA FOTO
+    ====================================================== */
+
+    .photo-glow {
+      box-shadow:
+        0 0 0 1px rgba(74, 222, 128, 0.35),
+        0 0 25px rgba(34, 197, 94, 0.15),
+        0 15px 35px rgba(0, 0, 0, 0.35);
+    }
+
+
+    /* =====================================================
+       LINHA DECORATIVA
+    ====================================================== */
+
+    .green-line {
+      background: linear-gradient(
+        90deg,
+        #14532d,
+        #22c55e,
+        rgba(34, 197, 94, 0)
+      );
+    }
+
+
+    /* =====================================================
+       TEXTO VERDE LEGÍVEL
+    ====================================================== */
+
+    .green-text {
+      color: #4ade80;
+    }
+
+    .green-text-soft {
+      color: #86efac;
+    }
+
+
+    /* =====================================================
+       HOVER DOS CARDS
+    ====================================================== */
+
+    .hover-card {
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .hover-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(34, 197, 94, 0.35);
+      box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.10),
+        0 0 20px rgba(34, 197, 94, 0.05);
+    }
+
+
+    /* =====================================================
+       TIMELINE
+    ====================================================== */
+
+    .timeline-line {
+      border-left-color: rgba(34, 197, 94, 0.22);
+    }
+
+
+    /* =====================================================
+       IMPRESSÃO
+    ====================================================== */
+
+    @media print {
+
+      body {
+        background: white !important;
+      }
+
+      .cv-container {
+        margin: 0 !important;
+        max-width: 100% !important;
+        box-shadow: none !important;
+      }
+
+      .no-print {
+        display: none !important;
+      }
+
+      a {
+        text-decoration: none !important;
+        color: inherit !important;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body class="min-h-screen py-6 md:py-10">
+
+
+  <!-- =====================================================
+       CONTAINER PRINCIPAL
+  ====================================================== -->
+
+  <div class="max-w-5xl mx-auto px-4 md:px-6">
+
+    <div
+      class="cv-container bg-white rounded-[2rem] shadow-[0_25px_80px_rgba(0,0,0,0.45)] overflow-hidden border border-green-950/20">
+
+
+      <!-- =====================================================
+           HEADER
+      ====================================================== -->
+
+      <header
+        class="green-gradient animate-gradient text-white px-7 py-10 md:px-12 md:py-12 relative overflow-hidden">
+
+
+        <!-- brilho decorativo -->
+
+        <div
+          class="absolute -top-32 -right-32 w-80 h-80 bg-green-500/10 rounded-full blur-3xl">
+        </div>
+
+        <div
+          class="absolute -bottom-40 -left-32 w-96 h-96 bg-green-700/10 rounded-full blur-3xl">
+        </div>
+
+
+        <div
+          class="relative flex flex-col md:flex-row items-center">
+
+
+          <!-- =================================================
+               FOTO
+          ================================================== -->
+
+          <div class="md:w-1/4 flex justify-center mb-7 md:mb-0">
+
+            <div
+              class="h-40 w-40 rounded-full border-[3px] border-green-400/80 shadow-xl overflow-hidden bg-black/50 flex items-center justify-center photo-glow">
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-20 w-20 text-green-400/80"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+
+              </svg>
+
+            </div>
+
+          </div>
+
+
+          <!-- =================================================
+               INFORMAÇÕES
+          ================================================== -->
+
+          <div class="md:w-3/4 text-center md:text-left md:pl-8">
+
+
+            <p
+              class="text-green-400 uppercase tracking-[0.25em] text-xs font-semibold mb-3">
+
+              Estudante
+
+            </p>
+
+
+            <h1
+              class="text-3xl md:text-5xl font-extrabold tracking-tight mb-3">
+
+              Fellipe Cardoso
+
+            </h1>
+
+
+            <h2
+              class="text-lg md:text-xl font-medium text-green-100/80 mb-6">
+
+              Biomedicina & Análise e Desenvolvimento de Sistemas
+
+            </h2>
+
+
+            <!-- CONTATOS -->
+
+            <div
+              class="flex flex-wrap justify-center md:justify-start gap-3">
+
+
+              <!-- EMAIL -->
+
+              <a
+                href="mailto:hyun140p@gmail.com"
+                class="flex items-center bg-black/25 backdrop-blur-sm border border-green-400/20 rounded-full px-4 py-2.5 hover:bg-green-500/10 hover:border-green-400/40 transition">
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 mr-2 text-green-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor">
+
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+
+                </svg>
+
+                <span class="text-sm text-green-50">
+                  hyun140p@gmail.com
+                </span>
+
+              </a>
+
+
+              <!-- GITHUB -->
+
+              <a
+                href="https://github.com/Fp569"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center bg-black/25 backdrop-blur-sm border border-green-400/20 rounded-full px-4 py-2.5 hover:bg-green-500/10 hover:border-green-400/40 transition">
+
+                <i
+                  class="devicon-github-original text-green-400 text-lg mr-2">
+                </i>
+
+                <span class="text-sm text-green-50">
+                  GitHub / Fp569
+                </span>
+
+              </a>
+
+
+              <!-- WHATSAPP -->
+
+              <a
+                href="https://wa.me/5521965560046?text=Olá%2C%20gostaria%20de%20entrar%20em%20contato?"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center bg-black/25 backdrop-blur-sm border border-green-400/20 rounded-full px-4 py-2.5 hover:bg-green-500/10 hover:border-green-400/40 transition">
+
+                <i
+                  class="fa-brands fa-whatsapp text-green-400 text-lg mr-2">
+                </i>
+
+                <span class="text-sm text-green-50">
+                  WhatsApp
+                </span>
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </header>
+
+
+      <!-- =====================================================
+           ÁREA PRINCIPAL
+      ====================================================== -->
+
+      <main
+        class="information-gradient p-6 md:p-10 text-green-50">
+
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+
+          <!-- =================================================
+               COLUNA ESQUERDA
+          ================================================== -->
+
+          <div class="md:col-span-2">
+
+
+            <!-- =================================================
+                 SOBRE MIM
+            ================================================== -->
+
+            <section class="mb-10">
+
+              <h2
+                class="text-xl font-bold text-green-50 flex items-center">
+
+                <span
+                  class="w-10 h-10 bg-green-500/10 border border-green-400/15 text-green-400 rounded-2xl flex items-center justify-center mr-3">
+
+                  👨‍💻
+
+                </span>
+
+                Sobre mim
+
+              </h2>
+
+
+              <div
+                class="w-16 h-1 green-line rounded-full mt-3 mb-5">
+              </div>
+
+
+              <div
+                class="bg-black/20 border border-green-500/10 rounded-2xl p-5 md:p-6">
+
+                <p
+                  class="text-green-100/75 leading-relaxed text-sm md:text-[15px]">
+
+                  Sou estudante de Biomedicina na Estácio e de Análise e
+                  Desenvolvimento de Sistemas no SENAI, construindo uma formação
+                  multidisciplinar e buscando minha primeira oportunidade
+                  profissional. Tenho interesse em diferentes áreas e gosto de
+                  aprender novas habilidades, especialmente aquelas que envolvem
+                  tecnologia, organização, análise e resolução de problemas.
+
+                  <br><br>
+
+                  Na área de tecnologia, venho desenvolvendo conhecimentos em
+                  HTML, CSS, JavaScript, Python, Git e GitHub por meio dos meus estudos
+                  e projetos acadêmicos e pessoais. Também possuo formação em
+                  língua alemã pelo Goethe-institut, com certificação de nível A2.
+
+                  <br><br>
+
+                  Sou uma pessoa dedicada, curiosa, organizada e com vontade de
+                  aprender. Busco uma oportunidade que me permita desenvolver
+                  experiência prática, contribuir com a equipe e continuar
+                  evoluindo profissionalmente.
+
+                </p>
+
+              </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 FORMAÇÃO
+            ================================================== -->
+
+            <section class="mb-10">
+
+              <h2
+                class="text-xl font-bold text-green-50 flex items-center">
+
+                <span
+                  class="w-10 h-10 bg-green-500/10 border border-green-400/15 text-green-400 rounded-2xl flex items-center justify-center mr-3">
+
+                  🎓
+
+                </span>
+
+                Formação Acadêmica
+
+              </h2>
+
+
+              <div
+                class="w-16 h-1 green-line rounded-full mt-3 mb-6">
+              </div>
+
+
+              <!-- ADS -->
+
+              <div
+                class="relative pl-7 border-l-2 timeline-line mb-8">
+
+                <div
+                  class="absolute -left-[8px] top-1.5 w-3.5 h-3.5 rounded-full bg-green-500 ring-4 ring-green-500/10 shadow-[0_0_12px_rgba(34,197,94,0.25)]">
+                </div>
+
+
+                <h3 class="text-lg font-bold text-green-50">
+
+                  Análise e Desenvolvimento de Sistemas
+
+                </h3>
+
+
+                <p class="text-green-400 font-semibold text-sm mb-3">
+
+                  SENAI · 2026 - Atualmente
+
+                </p>
+
+
+                <ul
+                  class="list-disc pl-5 text-sm text-green-100/65 space-y-2">
+
+                  <li>
+                    Formação voltada à área de tecnologia e desenvolvimento de sistemas.
+                  </li>
+
+                  <li>
+                    Estudos de desenvolvimento web utilizando HTML, CSS e JavaScript.
+                  </li>
+
+                  <li>
+                    Utilização de Git e GitHub para controle e organização de projetos.
+                  </li>
+
+                  <li>
+                    Desenvolvimento de atividades e projetos acadêmicos relacionados à programação.
+                  </li>
+
+                </ul>
+
+              </div>
+
+
+              <!-- BIOMEDICINA -->
+
+              <div
+                class="relative pl-7 border-l-2 timeline-line mb-8">
+
+                <div
+                  class="absolute -left-[8px] top-1.5 w-3.5 h-3.5 rounded-full bg-green-500 ring-4 ring-green-500/10 shadow-[0_0_12px_rgba(34,197,94,0.25)]">
+                </div>
+
+
+                <h3 class="text-lg font-bold text-green-50">
+
+                  Biomedicina
+
+                </h3>
+
+
+                <p class="text-green-400 font-semibold text-sm mb-3">
+
+                  Estácio · 2026 - Atualmente
+
+                </p>
+
+
+                <ul
+                  class="list-disc pl-5 text-sm text-green-100/65 space-y-2">
+
+                  <li>
+                    Formação na área de Biomedicina e ciências da saúde.
+                  </li>
+
+                  <li>
+                    Desenvolvimento de conhecimentos científicos e acadêmicos.
+                  </li>
+
+                  <li>
+                    Desenvolvimento de habilidades relacionadas à organização,
+                    análise, atenção aos detalhes e responsabilidade.
+                  </li>
+
+                </ul>
+
+              </div>
+
+
+              <!-- ALEMÃO -->
+
+              <div
+                class="relative pl-7 border-l-2 timeline-line">
+
+                <div
+                  class="absolute -left-[8px] top-1.5 w-3.5 h-3.5 rounded-full bg-green-500 ring-4 ring-green-500/10 shadow-[0_0_12px_rgba(34,197,94,0.25)]">
+                </div>
+
+
+                <h3 class="text-lg font-bold text-green-50">
+
+                  Formação em Língua Alemã
+
+                </h3>
+
+
+                <p class="text-green-400 font-semibold text-sm mb-3">
+
+                  CEPEMD · Formação concluída
+
+                </p>
+
+
+                <ul
+                  class="list-disc pl-5 text-sm text-green-100/65 space-y-2">
+
+                  <li>
+                    Formação em língua alemã pelo Goethe-institut.
+                  </li>
+
+                  <li>
+                    Certificação de nível A2 em língua alemã.
+                  </li>
+
+                </ul>
+
+              </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 PROJETOS
+            ================================================== -->
+
+            <section class="mb-10">
+
+              <h2
+                class="text-xl font-bold text-green-50 flex items-center">
+
+                <span
+                  class="w-10 h-10 bg-green-500/10 border border-green-400/15 text-green-400 rounded-2xl flex items-center justify-center mr-3">
+
+                  🚀
+
+                </span>
+
+                Projetos e Experiência Prática
+
+              </h2>
+
+
+              <div
+                class="w-16 h-1 green-line rounded-full mt-3 mb-6">
+              </div>
+
+
+              <!-- PROJETO 1 -->
+
+              <div
+                class="p-5 mb-4 bg-gradient-to-br from-green-950/40 to-black/30 border border-green-500/10 border-l-2 border-l-green-500/60 rounded-2xl hover-card">
+
+                <div
+                  class="flex justify-between items-start gap-3">
+
+                  <h3 class="text-lg font-bold text-green-50">
+
+                    Estudos e Projetos de Desenvolvimento Web
+
+                  </h3>
+
+
+                  <span
+                    class="text-xs bg-green-500/10 text-green-400 border border-green-500/15 px-3 py-1 rounded-full whitespace-nowrap">
+
+                    Em desenvolvimento
+
+                  </span>
+
+                </div>
+
+
+                <p
+                  class="text-sm text-green-100/65 mt-2 leading-relaxed">
+
+                  Desenvolvimento de atividades e projetos durante os estudos
+                  de Análise e Desenvolvimento de Sistemas, com foco em
+                  programação e desenvolvimento web.
+
+                </p>
+
+
+                <p
+                  class="text-xs font-semibold text-green-400 mt-3">
+
+                  HTML · CSS · JavaScript · Git · GitHub
+
+                </p>
+
+              </div>
+
+
+              <!-- PROJETO 2 -->
+
+              <div
+                class="p-5 bg-gradient-to-br from-green-950/40 to-black/30 border border-green-500/10 border-l-2 border-l-green-500/60 rounded-2xl hover-card">
+
+                <h3 class="text-lg font-bold text-green-50">
+
+                  Portfólio e Currículo Digital
+
+                </h3>
+
+
+                <p
+                  class="text-sm text-green-100/65 mt-2 leading-relaxed">
+
+                  Desenvolvimento e organização de uma apresentação digital
+                  para reunir formação acadêmica, conhecimentos, projetos e
+                  trajetória profissional.
+
+                </p>
+
+
+                <p
+                  class="text-xs font-semibold text-green-400 mt-3">
+
+                  HTML · CSS · Tailwind CSS · JavaScript
+
+                </p>
+
+              </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 OBJETIVO
+            ================================================== -->
+
+            <section>
+
+              <h2
+                class="text-xl font-bold text-green-50 flex items-center">
+
+                <span
+                  class="w-10 h-10 bg-green-500/10 border border-green-400/15 text-green-400 rounded-2xl flex items-center justify-center mr-3">
+
+                  🎯
+
+                </span>
+
+                Objetivo Profissional
+
+              </h2>
+
+
+              <div
+                class="w-16 h-1 green-line rounded-full mt-3 mb-5">
+              </div>
+
+
+              <div
+                class="p-5 bg-gradient-to-br from-green-950/40 to-black/30 border border-green-500/10 border-l-2 border-l-green-500/60 rounded-2xl">
+
+                <p
+                  class="text-sm text-green-100/70 leading-relaxed">
+
+                  Busco minha primeira oportunidade profissional ou estágio,
+                  em uma área na qual possa aplicar meus conhecimentos,
+                  desenvolver novas habilidades e adquirir experiência prática.
+                  Tenho interesse em oportunidades relacionadas à tecnologia,
+                  área administrativa, atendimento, Biomedicina ou outras áreas
+                  compatíveis com meu perfil e formação.
+
+                </p>
+
+              </div>
+
+            </section>
+
+          </div>
+
+
+          <!-- =================================================
+               COLUNA DIREITA
+          ================================================== -->
+
+          <aside>
+
+
+            <!-- =================================================
+                 CONHECIMENTOS
+            ================================================== -->
+
+            <section class="mb-9">
+
+              <h2 class="text-xl font-bold text-green-50 flex items-center">
+
+                <span
+                  class="w-10 h-10 bg-green-500/10 border border-green-400/15 text-green-400 rounded-2xl flex items-center justify-center mr-3">
+
+                  ⚡
+
+                </span>
+
+                Conhecimentos
+
+              </h2>
+
+
+              <div
+                class="w-16 h-1 green-line rounded-full mt-3 mb-5">
+              </div>
+
+
+              <div class="space-y-3">
+
+
+                <!-- JAVASCRIPT -->
+
+                <div
+                  class="p-4 bg-black/20 border border-green-500/10 rounded-2xl hover-card">
+
+                  <p class="font-semibold text-green-50">
+                    JavaScript
+                  </p>
+
+                  <p class="text-xs text-green-100/50 mt-1">
+                    Programação e desenvolvimento web
+                  </p>
+
+                </div>
+
+
+                <!-- HTML -->
+
+                <div
+                  class="p-4 bg-black/20 border border-green-500/10 rounded-2xl hover-card">
+
+                  <p class="font-semibold text-green-50">
+                    HTML5
+                  </p>
+
+                  <p class="text-xs text-green-100/50 mt-1">
+                    Estruturação de páginas web
+                  </p>
+
+                </div>
+
+
+                <!-- CSS -->
+
+                <div
+                  class="p-4 bg-black/20 border border-green-500/10 rounded-2xl hover-card">
+
+                  <p class="font-semibold text-green-50">
+                    CSS3
+                  </p>
+
+                  <p class="text-xs text-green-100/50 mt-1">
+                    Estilização e responsividade
+                  </p>
+
+                </div>
+
+
+                <!-- GIT -->
+
+                <div
+                  class="p-4 bg-black/20 border border-green-500/10 rounded-2xl hover-card">
+
+                  <p class="font-semibold text-green-50">
+                    Git
+                  </p>
+
+                  <p class="text-xs text-green-100/50 mt-1">
+                    Controle de versão
+                  </p>
+
+                </div>
+
+
+                <!-- GITHUB -->
+
+                <a
+                  href="https://github.com/Fp569"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="block p-4 bg-black/20 border border-green-500/10 rounded-2xl hover-card">
+
+                  <p class="font-semibold text-green-50">
+                    GitHub
+                  </p>
+
+                  <p class="text-xs text-green-100/50 mt-1">
+                    Projetos e versionamento de código
+                  </p>
+
+                </a>
+
+              </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 FORMAÇÃO
+            ================================================== -->
+
+            <section class="mb-9">
+
+              <h2 class="text-xl font-bold text-green-50">
+                Formação
+              </h2>
+
+              <div
+                class="w-16 h-1 green-line rounded-full mt-3 mb-5">
+              </div>
+
+
+              <div class="space-y-3">
+
+
+                <div
+                  class="p-4 bg-black/20 border border-green-500/10 rounded-2xl">
+
+                  <p class="font-semibold text-green-50">
+                    Análise e Desenvolvimento de Sistemas
+                  </p>
+
+                  <p class="text-xs text-green-100/50 mt-1">
+                    SENAI · Em andamento
+                  </p>
+
+                </div>
+
+
+                <div
+                  class="p-4 bg-black/20 border border-green-500/10 rounded-2xl">
+
+                  <p class="font-semibold text-green-50">
+                    Biomedicina
+                  </p>
+
+                  <p class="text-xs text-green-100/50 mt-1">
+                    Estácio · Em andamento
+                  </p>
+
+                </div>
+
+              </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 IDIOMAS
+            ================================================== -->
+
+            <section class="mb-9">
+
+              <h2 class="text-xl font-bold text-green-50">
+                Idiomas
+              </h2>
+
+              <div
+                class="w-16 h-1 green-line rounded-full mt-3 mb-5">
+              </div>
+
+
+              <div class="space-y-3">
+
+
+                <div
+                  class="flex items-center justify-between p-4 bg-black/20 border border-green-500/10 rounded-2xl">
+
+                  <span class="font-medium text-green-50">
+                    Português
+                  </span>
+
+                  <span class="text-sm font-semibold text-green-400">
+                    Nativo
+                  </span>
+
+                </div>
+
+
+                <div
+                  class="flex items-center justify-between p-4 bg-black/20 border border-green-500/10 rounded-2xl">
+
+                  <span class="font-medium text-green-50">
+                    Alemão
+                  </span>
+
+                  <span class="text-sm font-semibold text-green-400">
+                    A2
+                  </span>
+
+                </div>
+
+
+                <div
+                  class="flex items-center justify-between p-4 bg-black/20 border border-green-500/10 rounded-2xl">
+
+                  <span class="font-medium text-green-50">
+                    Inglês
+                  </span>
+
+                  <span class="text-sm font-semibold text-green-400">
+                    A2
+                  </span>
+
+                </div>
+
+              </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 CERTIFICAÇÕES
+            ================================================== -->
+
+            <section class="mb-9">
+
+              <h2 class="text-xl font-bold text-green-50">
+                Certificações
+              </h2>
+
+              <div
+                class="w-16 h-1 green-line rounded-full mt-3 mb-5">
+              </div>
+
+
+              <div
+                class="p-4 bg-gradient-to-br from-green-950/50 to-black/30 border border-green-500/10 border-l-2 border-l-green-500/60 rounded-2xl">
+
+                <p class="font-semibold text-green-50">
+                  Língua Alemã — A2
+                </p>
+
+                <p class="text-xs text-green-100/55 mt-1">
+                  Certificação de nível A2 em língua alemã pela CEPEMD.
+                </p>
+
+              </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 PERFIL
+            ================================================== -->
+
+            <section class="mb-9">
+
+              <h2 class="text-xl font-bold text-green-50">
+                Perfil
+              </h2>
+
+              <div
+                class="w-16 h-1 green-line rounded-full mt-3 mb-5">
+              </div>
+
+
+              <div class="flex flex-wrap gap-2">
+
+                <span
+                  class="px-3 py-1.5 bg-green-500/10 border border-green-500/10 text-green-300 rounded-full text-xs font-medium">
+                  Curioso
+                </span>
+
+                <span
+                  class="px-3 py-1.5 bg-green-500/10 border border-green-500/10 text-green-300 rounded-full text-xs font-medium">
+                  Aprendizado contínuo
+                </span>
+
+                <span
+                  class="px-3 py-1.5 bg-green-500/10 border border-green-500/10 text-green-300 rounded-full text-xs font-medium">
+                  Proativo
+                </span>
+
+                <span
+                  class="px-3 py-1.5 bg-green-500/10 border border-green-500/10 text-green-300 rounded-full text-xs font-medium">
+                  Organização
+                </span>
+
+                <span
+                  class="px-3 py-1.5 bg-green-500/10 border border-green-500/10 text-green-300 rounded-full text-xs font-medium">
+                  Responsabilidade
+                </span>
+
+                <span
+                  class="px-3 py-1.5 bg-green-500/10 border border-green-500/10 text-green-300 rounded-full text-xs font-medium">
+                  Trabalho em equipe
+                </span>
+
+                <span
+                  class="px-3 py-1.5 bg-green-500/10 border border-green-500/10 text-green-300 rounded-full text-xs font-medium">
+                  Facilidade para aprender
+                </span>
+
+              </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 CONTATO
+            ================================================== -->
+
+            <section>
+
+              <h2 class="text-xl font-bold text-green-50">
+                Contato
+              </h2>
+
+              <div
+                class="w-16 h-1 green-line rounded-full mt-3 mb-5">
+              </div>
+
+
+              <div class="space-y-4">
+
+
+                <!-- EMAIL -->
+
+                <a
+                  href="mailto:hyun140p@gmail.com"
+                  class="flex items-center text-green-100/70 hover:text-blue-400 transition">
+
+                  <span
+                    class="w-9 h-9 bg-green-500/10 border border-green-500/10 text-green-400 rounded-xl flex items-center justify-center mr-3">
+
+                    ✉
+
+                  </span>
+
+                  <span class="text-sm break-all">
+                    hyun140p@gmail.com
+                  </span>
+
+                </a>
+
+
+                <!-- GITHUB -->
+
+                <a
+                  href="https://github.com/Fp569"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center text-green-100/70 hover:text-purple-400 transition">
+
+                  <span
+                    class="w-9 h-9 bg-green-500/10 border border-green-500/10 text-green-400 rounded-xl flex items-center justify-center mr-3">
+
+                    <i class="devicon-github-original text-lg"></i>
+
+                  </span>
+
+                  <span class="text-sm">
+                    github.com/Fp569
+                  </span>
+
+                </a>
+
+
+                <!-- WHATSAPP -->
+
+                <a
+                  href="https://wa.me/5521965560046?text=Olá%2C%20gostaria%20de%20entrar%20em%20contato?"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center text-green-100/70 hover:text-green-400 transition">
+
+                  <span
+                    class="w-9 h-9 bg-green-500/10 border border-green-500/10 text-green-400 rounded-xl flex items-center justify-center mr-3">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                  </span>
+
+                  <span class="text-sm">
+                    +5521965560046
+                  </span>
+
+                </a>
+
+              </div>
+
+            </section>
+
+          </aside>
+
+        </div>
+
+      </main>
+
+
+      <!-- =====================================================
+           FOOTER
+      ====================================================== -->
+
+      <footer
+        class="green-gradient animate-gradient text-center px-5 py-6 text-sm border-t border-green-500/10">
+
+        <p class="text-green-100/70">
+          Fellipe Cardoso · Estudante · 2026
+        </p>
+
+      </footer>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
